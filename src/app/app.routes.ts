@@ -4,19 +4,13 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./features/catalog/catalog.component')
+      import('./features/catalog/catalog')
         .then(m => m.CatalogComponent)
-  },
-  {
-    path: 'product/:id',
-    loadComponent: () =>
-      import('./features/catalog/product-detail/product-detail.component')
-        .then(m => m.ProductDetailComponent)
   },
   {
     path: 'cart',
     loadComponent: () =>
-      import('./features/cart/cart.component')
+      import('./features/cart/cart')
         .then(m => m.CartComponent)
   },
   {
@@ -24,13 +18,12 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./features/admin/admin.routes')
         .then(m => m.adminRoutes)
-    // authGuard irá aquí en la Fase 3
   },
   {
     path: 'auth',
     loadComponent: () =>
-      import('./features/auth/auth.component')
-        .then(m => m.AuthComponent)
+      import('./features/auth/auth')
+        .then(m => Object.values(m)[0] as any)
   },
   { path: '**', redirectTo: '' }
 ];
