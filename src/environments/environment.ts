@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'tienda-api-production-331b.up.railway.app/api',
+  apiUrl: 'https://tienda-api-production-331b.up.railway.app/api',
   firebase: {
 	  apiKey: "AIzaSyDvIL2oW2TnCLfAklpAxj1XWPsH32oBH14",
 	  authDomain: "tienda-virtual-d9df5.firebaseapp.com",
