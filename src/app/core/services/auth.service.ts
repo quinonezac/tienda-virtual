@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { Auth, signInWithEmailAndPassword, signInWithPopup,
          GoogleAuthProvider, signOut, user } from '@angular/fire/auth';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
